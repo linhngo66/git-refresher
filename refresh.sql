@@ -87,7 +87,7 @@ DROP Drop_timestamp;
 
 -- Number of request ids to each pick up point and time of day
 SELECT DISTINCT(Pickup_point), 
-	   COUNT(Request_id) 
+	   COUNT(Request_id) as RequestNumber 
 FROM uberrequest
 GROUP BY Pickup_point;
 
