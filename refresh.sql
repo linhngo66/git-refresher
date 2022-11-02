@@ -162,7 +162,7 @@ ORDER BY Time_of_day;
 
 -- Average travel time group by pickup point
 SELECT Pickup_point, 
-	   AVG(TIMESTAMPDIFF(HOUR, Request_timestampDT, Drop_timestampDT)) 
+	   AVG(TIMESTAMPDIFF(HOUR, Request_timestampDT, Drop_timestampDT)) as AverageTravelTime
 FROM uberrequest
 GROUP BY Pickup_point;
 
